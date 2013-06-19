@@ -1,25 +1,21 @@
-nav{
-
-}
 #wrapper{
 	margin:0 auto;
 	min-width:1024px;
 }
-
 h1,h2{
 	font-family: 'Parisienne', cursive;
 }
-h2{
+h1#header-n-line, h2{
 	font-size:40px;
 	position:relative;
 	margin-top:20px;
 	text-align:center;
 	
 }
-h2.h-w-line{
+h1.h-w-line, h2.h-w-line{
 	margin-top:0;
 }
-h2:before {
+h1#header-n-line:before, h2:before {
 	content: "";
 	display: block;
 	border-top: solid 1px #333333;
@@ -31,7 +27,7 @@ h2:before {
 	z-index: 1;
 }
 
-h2 span {
+h1#header-n-line span, h2 span {
 	background-color:#F3F7E2;
 	padding: 0 20px;
 	position: relative;
@@ -42,6 +38,12 @@ a:link, a:visited, a:hover, a:active{
 	color:white;
 	text-decoration:none;
 	border-width: 0px;
+}
+a#current-page:link{
+	color:#EA2B9A;
+}
+a#current-model:link{
+	color:#000;
 }
 #logo-heading, #social{
 	display:inline;
@@ -54,10 +56,16 @@ a:link, a:visited, a:hover, a:active{
 	text-align:center;
 }
 #slide-background{
-	background-color:#013938;
 	height:288px;
 	overflow:visible;
 	border-bottom:30px solid #AEAEAE;
+}
+#nav-background, #slide-background{
+	background-color:#013938;
+}
+#nav-background{
+	height:60px;
+	border-bottom:5px solid #AEAEAE;
 }
 nav ul{
 	list-style:none;
@@ -79,11 +87,15 @@ nav ul li{
 nav ul li:last-child{
 	border-right-width:0px;
 }
-
+#models-menu{
+	background-color:#FFF;
+	font-weight:700;
+	font-size:12px;
+}
 #slider{
 	margin:-20px auto 0px;
-	width:774px;
-	height:276px;
+	width:850px;
+	height:303px;
 	border:solid 4px #999999;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -102,11 +114,11 @@ nav ul li:last-child{
 	margin:0 auto;
 }
 #content{
+	margin-top:-18px;
 	padding-top:80px;
 	background-color:#F3F7E2;
 	color:#585849;
 }
-
 #youtube-video, #article-container{
 	width:392px;
 	padding:5px 30px 30px;
@@ -130,7 +142,7 @@ nav ul li:last-child{
 #nav-footer{
 	margin-left:80px;
 }
-#address{
+#address,#address-aside{
 	text-align:right;
 	color:white;
 	font-family:Arial, sans-serif;
@@ -138,6 +150,25 @@ nav ul li:last-child{
 	float:right;
 	margin-top:25px;
 }
+#address-aside{
+	font-weight:700;
+	color:#013938;
+	text-align:left;
+	font-size:12px;
+	float:none;
+}
+#map{
+	width: 300px;
+	height: 246px;
+	border-width: 0px;
+}
+textarea{
+	resize: none;
+}
 .clear{
 	clear:both;
+}
+.thumbnail{
+	border:10px solid #013938;
+	margin:10px 25px;
 }

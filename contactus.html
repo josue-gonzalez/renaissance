@@ -5,8 +5,21 @@
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
 		<link rel="shortcut icon" href="favorite.ico">
-		<title>Villas at Renaissance - About Us</title>
+		<title>Villas at Renaissance - Contact Us</title>
 		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script>
+			function initialize() {
+				var mapCanvas = document.getElementById('map_canvas');
+				var mapOptions = {
+					center: new google.maps.LatLng(44.5403, -78.5463),
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(map_canvas, map_options);
+			}
+			google.maps.event.addDomListener(window, ‘load’, initialize);
+	</script>
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: { families: [ 'Parisienne::latin', 'Michroma::latin' ]  }
@@ -34,9 +47,9 @@
 					<nav>
 						<ul>
 							<li><a href="#">HOME</a></li>
-							<li><a href="#" id="current-page">ABOUT US</a></li>
+							<li><a href="#">ABOUT US</a></li>
 							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="#" id="current-page">CONTACT</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -46,27 +59,46 @@
 				<section id="content">
 					<article id="article">
 						<header>
-							<h1 id="header-n-line" class="h-w-line"><span>About Us</span></h2>
+							<h1 id="header-n-line" class="h-w-line"><span>Contact Us</span></h2>
 						</header>
 						<div id="article-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ipsum. Praesent a nunc ac nulla sollicitudin feugiat. Duis dapibus nibh aliquam imperdiet suscipit. Morbi adipiscing laoreet mi, at vulputate quam vulputate a. In et rutrum dolor. Duis faucibus pulvinar purus id volutpat. Suspendisse tempor cursus eros in posuere.</p>
-							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut in nisl rutrum, bibendum arcu quis, fermentum dolor. Vestibulum lobortis fermentum ante. Phasellus at ipsum at libero scelerisque imperdiet. Donec nulla odio, aliquam eget ultricies lacinia, vulputate sed lorem. Pellentesque porta pharetra ante id eleifend. Ut tempor at est at sagittis.</p>
-							<p>Pellentesque pretium magna nec luctus vulputate. Mauris tempus consectetur arcu eu vehicula. Nunc consequat nisi risus, eu varius neque ullamcorper eu. Fusce suscipit augue vestibulum, viverra sem ut, pretium turpis. Nulla quis leo mauris. Nunc tincidunt elementum ligula, ut convallis eros suscipit vitae. Vivamus congue ornare sodales. Duis in justo eu enim tincidunt tincidunt ut nec lectus. Proin sollicitudin suscipit mauris vitae elementum. Praesent orci nisl, tincidunt a dignissim a, vestibulum at neque. Curabitur rhoncus nulla vel neque rutrum, eu ultrices mi interdum. Pellentesque nisl odio, cursus id vehicula blandit, sagittis sit amet est. Mauris euismod porttitor dui mattis sollicitudin.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ipsum. Praesent a nunc ac nulla sollicitudin feugiat.</p>
+							<form method="post">
+								<div class="row">
+									<label for="txt_Name">Name</label><br>
+									<input id="txt_Name" name="txt_Name" type="text">
+								</div>
+								<div class="row">
+									<label for="txt_Email">Email</label><br>
+									<input id="txt_Email" name="txt_Email" type="text">
+								</div>
+								<div class="row">
+									<label for="txt_City">City</label><br>
+									<input id="txt_City" name="txt_City" type="text">
+								</div>
+								<div class="row">
+									<label for="txt_State">State</label><br>
+									<input id="txt_State" name="txt_State" type="text">
+								</div>
+								<div class="row">
+									<label for="txtarea_Comments">Comments</label><br>
+									<textarea id="txtarea_Comments" name="txtarea_Comments" cols="40" rows="6" resize="noresize"></textarea>
+								</div>
+								<div class="row">
+									<input type="submit" value="Send">
+								</div>
+							</form>
 						</div>
 					</article>
-					<aside id="images-aside">
-						<figure>  
-							<img class="thumbnail" id="thumbnail1" src="img/thumbnail1.jpg" alt="Image 1" width="398" height="258">    
-							<!--<figcaption>
-								<p>This is a caption.</p>        
-							</figcaption> --> 
-						</figure>
-						<figure>  
-							<img class="thumbnail" id="thumbnail2" src="img/thumbnail2.jpg" alt="Image 2" width="398" height="258">
-							<!--<figcaption>
-								<p>This is a caption.</p>        
-							</figcaption> --> 
-						</figure>
+					<aside id="map-aside">
+						<section id="address-aside">
+							2998 West Ross Avenue El Centro, CA 92243<br>
+							760-352-4622<br>
+							fax 760-353-381<br>
+							<figure>  
+								<img id="map" src="img/map.jpg" alt="Renaissance Map" width="213" height="176"> 
+							</figure>
+						</section>
 					</aside>
 					<br class="clear">
 				</section>
