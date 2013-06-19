@@ -1,0 +1,143 @@
+nav{
+
+}
+#wrapper{
+	margin:0 auto;
+	min-width:1024px;
+}
+
+h1,h2{
+	font-family: 'Parisienne', cursive;
+}
+h2{
+	font-size:40px;
+	position:relative;
+	margin-top:20px;
+	text-align:center;
+	
+}
+h2.h-w-line{
+	margin-top:0;
+}
+h2:before {
+	content: "";
+	display: block;
+	border-top: solid 1px #333333;
+	width: 75%;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 12.5%;
+	z-index: 1;
+}
+
+h2 span {
+	background-color:#F3F7E2;
+	padding: 0 20px;
+	position: relative;
+	z-index: 5;
+}
+
+a:link, a:visited, a:hover, a:active{
+	color:white;
+	text-decoration:none;
+	border-width: 0px;
+}
+#logo-heading, #social{
+	display:inline;
+}
+#social{
+	width:96px;
+	text-align:left;
+}
+#header, nav{
+	text-align:center;
+}
+#slide-background{
+	background-color:#013938;
+	height:288px;
+	overflow:visible;
+	border-bottom:30px solid #AEAEAE;
+}
+nav ul{
+	list-style:none;
+	padding:18px 15px 22px 16px;
+}
+
+nav ul li{
+	font-family: 'Michroma', sans-serif;
+	font-size:10px;
+	display:inline;
+	text-align:center;
+	color:white;
+	margin:0px;
+	padding:0px;
+	border-right:1px solid #FFF;
+	padding:10px 20px;
+}
+
+nav ul li:last-child{
+	border-right-width:0px;
+}
+
+#slider{
+	margin:-20px auto 0px;
+	width:774px;
+	height:276px;
+	border:solid 4px #999999;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 0px 10px 5px #333333;
+	-webkit-box-shadow: 0px 10px 5px #333333;
+	box-shadow: 0px 10px 5px #333333;
+	background-color:#FFF;
+	
+}
+.slide{
+
+}
+#content, #footer-container{
+	width:960px;
+	margin:0 auto;
+}
+#content{
+	padding-top:80px;
+	background-color:#F3F7E2;
+	color:#585849;
+}
+
+#youtube-video, #article-container{
+	width:392px;
+	padding:5px 30px 30px;
+	float:left;
+}
+#article-container{
+	text-align:justify;
+	font-family:Arial,sans-serif;
+}
+#youtube-video{
+	text-align:center;
+}
+#footer{
+	background-color:#381E0F;
+	padding:8px 30px;
+	min-width:960px;
+}
+#footer img, #nav-footer, #address{
+	float:left;
+}
+#nav-footer{
+	margin-left:80px;
+}
+#address{
+	text-align:right;
+	color:white;
+	font-family:Arial, sans-serif;
+	font-size:8px;
+	float:right;
+	margin-top:25px;
+}
+.clear{
+	clear:both;
+}
