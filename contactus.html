@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
 		<link rel="shortcut icon" href="favorite.ico">
@@ -46,10 +48,10 @@
 				<div id="nav-background">
 					<nav>
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#" id="current-page">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html" class="selected">CONTACT</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -63,7 +65,7 @@
 						</header>
 						<div id="article-container">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ipsum. Praesent a nunc ac nulla sollicitudin feugiat.</p>
-							<form method="post">
+							<!--<form method="post">
 								<div class="row">
 									<label for="txt_Name">Name</label><br>
 									<input id="txt_Name" name="txt_Name" type="text">
@@ -87,6 +89,20 @@
 								<div class="row">
 									<input type="submit" value="Send">
 								</div>
+							</form>-->
+							<form>
+								<fieldset>
+									<!--<legend>Contact Form</legend>-->
+									<!--<label>Name</label>-->
+									<input class="input-block-level" type="text" placeholder="Name">
+									<input class="input-block-level" type="text" placeholder="Email">
+									<input class="input-block-level" type="text" placeholder="City">
+									<input class="input-block-level" type="text" placeholder="State">
+									<textarea class="input-block-level" rows="5" placeholder="Comments"></textarea>
+									<br>
+									<!--<span class="help-block">Example block-level help text here.</span>-->
+									<button type="submit" class="btn btn-primary">Send</button>
+								</fieldset>
 							</form>
 						</div>
 					</article>
@@ -108,10 +124,10 @@
 					<img src="img/Villas_at_renaissance_2.png" alt="Villas at Renaissance" width="126" height="76">
 					<nav id="nav-footer">
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html" class="selected">CONTACT</a></li>
 						</ul>
 					</nav>
 					<section id="address">

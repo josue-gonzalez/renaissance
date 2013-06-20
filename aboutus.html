@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
 		<link rel="shortcut icon" href="favorite.ico">
@@ -33,10 +35,10 @@
 				<div id="nav-background">
 					<nav>
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#" id="current-page">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html" class="selected">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -76,10 +78,10 @@
 					<img src="img/Villas_at_renaissance_2.png" alt="Villas at Renaissance" width="126" height="76">
 					<nav id="nav-footer">
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html" class="selected">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 					<section id="address">
@@ -91,19 +93,25 @@
 				</div>
 			</footer>
 		</div>
-	<div id="modal" class="styled">
-		
+	<div id="modal1" class="styled">
+		.<img src="img/image1.jpg" alt="Image 1" width="796" height="516">
+	</div>
+	<div id="modal2" class="styled">
+		,<img src="img/image2.jpg" alt="Image 2" width="796" height="516">
 	</div>
 	<div id="modal-background"></div>
 	<script type="text/javascript">
 	$(document).ready(function(e) {
-		$('#thumbnail1, #thumbnail2').click(function(){	
-			$('#modal').load('img/image1.jpg');
-			$('#modal').fadeIn();
+		$('#thumbnail1').click(function(){	
+			$('#modal1').fadeIn();
 			$('#modal-background').fadeTo(500, .5);
 		});
-		$('#modal, #modal-background').click(function(){	
-			$('#modal, #modal-background').fadeOut();
+		$('#thumbnail2').click(function(){	
+			$('#modal2').fadeIn();
+			$('#modal-background').fadeTo(500, .5);
+		});
+		$('#modal1, #modal2, #modal-background').click(function(){	
+			$('#modal1, #modal2, #modal-background').fadeOut();
 		});
 		
     });

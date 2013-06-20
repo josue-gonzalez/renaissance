@@ -2,11 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css">
 		<link rel="shortcut icon" href="favorite.ico">
 		<title>Villas at Renaissance - Home</title>
 		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/cycle.js"></script>
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: { families: [ 'Parisienne::latin', 'Michroma::latin' ]  }
@@ -20,7 +24,13 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(wf, s);
 			  })();
-			
+		</script>
+		<script type="text/jscript">
+			$(document).ready(function(){
+				$('.slideshow').cycle({
+					fx: 'fade'
+				});
+			});
 		</script>
 	</head>
 	<body>
@@ -34,22 +44,23 @@
 				<div id="slide-background">
 					<nav>
 						<ul>
-							<li><a href="#" id="current-page">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html" class="selected">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 					<section>
-						<div id="slider">
-							.<!--<img class="slide" src="img/kitchen.jpg" alt="Kitchen" width="104" height="37">-->
+						<div class="slideshow">
+							<img src="img/kitchen.jpg" alt="Kitchen">
+							<img src="img/outdoors.jpg" alt="Outdoors">
 						</div>
 					</section>
 				</div>
 			</header>
 			<br class="clear">
 			<div>
-				<section id="content">
+				<section id="content-main">
 					<article id="article">
 						<header>
 							<h2 class="h-w-line"><span>Welcome</span></h2>
@@ -71,10 +82,10 @@
 					<img src="img/Villas_at_renaissance_2.png" alt="Villas at Renaissance" width="126" height="76">
 					<nav id="nav-footer">
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html" class="selected">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 					<section id="address">

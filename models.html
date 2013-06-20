@@ -2,11 +2,15 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css">
 		<link rel="shortcut icon" href="favorite.ico">
 		<title>Villas at Renaissance - Models</title>
 		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/cycle.js"></script>
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: { families: [ 'Parisienne::latin', 'Michroma::latin' ]  }
@@ -21,6 +25,13 @@
 				s.parentNode.insertBefore(wf, s);
 			  })();
 		</script>
+		<script type="text/jscript">
+			$(document).ready(function(){
+				$('.slideshow2').cycle({
+					fx: 'scrollLeft'
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -33,10 +44,10 @@
 				<div id="nav-background">
 					<nav>
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#" id="current-page">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html" class="selected">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -62,22 +73,9 @@
 								<h3>ELEVATION C-1 FRENCH COUNTRY</h3>
 							</header>
 							<section>
-								<div id="slider2-container">
-									<div id="slider2">.</div>
-									<div id="slider2-thumbnails">
-										<figure>
-											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
-										</figure>
-										<figure>
-											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
-										</figure>
-										<figure>
-											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
-										</figure>
-										<figure>
-											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
-										</figure>
-									</div>
+								<div class="slideshow2">
+									<img src="img/thumbnail_house_5.jpg" alt="thumbnail house 5">
+									<img src="img/thumbnail_house_5.jpg" alt="thumbnail house 5">
 								</div>
 							</section>
 							<br class="clear">
@@ -100,7 +98,7 @@
 							<h3>ELEVATION C-1 FRENCH COUNTRY PLANT</h3>
 						</header>
 						<figure>  
-							<img class="thumbnail" id="plant_thumbnail" src="img/blueprint_5.jpg" alt="Elevation C-1 French Country Plant" width="367" height="241">
+							<img class="thumbnail" id="blueprint" src="img/blueprint_5.jpg" alt="Elevation C-1 French Country Plant" width="367" height="241">
 						</figure>
 						<a id="download_link" href="pdf/plant5.pdf">DOWNLOAD SPECS AND FUTURE LIST <img src="img/pdf.png" alt="Download PDF" width="84" height="79"></a>
 					</aside>
@@ -112,10 +110,10 @@
 					<img src="img/Villas_at_renaissance_2.png" alt="Villas at Renaissance" width="126" height="76">
 					<nav id="nav-footer">
 						<ul>
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">MODELS</a></li>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="models.html" class="selected">MODELS</a></li>
+							<li><a href="contactus.html">CONTACT</a></li>
 						</ul>
 					</nav>
 					<section id="address">
@@ -127,20 +125,20 @@
 				</div>
 			</footer>
 		</div>
-	<div id="modal" class="styled">
+	<div id="modal1" class="styled">
 		<figure>
-			<img class="thumbnail" id="plant" src="img/blueprint_5.jpg" alt="Elevation C-1 French Country Plant" width="367" height="241">
+			<img class="thumbnail" id="elevation-5" src="img/thumbnail_elevation_5" alt="Elevation C-1 French Country Plant" width="367" height="241">
 		</figure>
 	</div>
 	<div id="modal-background"></div>
 	<script type="text/javascript">
 	$(document).ready(function(e) {
-		$('#plant').click(function(){	
-			$('#modal').fadeIn();
+		$('#elevation_thumbnail').click(function(){	
+			$('#modal1').fadeIn();
 			$('#modal-background').fadeTo( 500, .5 );
 		});
-		$('#modal, #modal-background').click(function(){	
-			$('#modal, #modal-background').fadeOut();
+		$('#modal1, #modal-background').click(function(){	
+			$('#modal1, #modal-background').fadeOut();
 		});
 		
     });
