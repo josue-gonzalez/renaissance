@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/modal.css">
+		<link rel="shortcut icon" href="favorite.ico">
+		<title>Villas at Renaissance - Models</title>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: { families: [ 'Parisienne::latin', 'Michroma::latin' ]  }
+			  };
+			  (function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			  })();
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<h1 id="logo-heading"><img src="img/Villas_at_Renaissance.png" alt="Villas at Renaissance" width="757" height="394"></h1>
+				<div id="social">
+					<img src="img/twitter.png" alt="Twitter" width="36" height="36">
+					<img src="img/facebook.png" alt="Facebook" width="36" height="36">
+				</div>
+				<div id="nav-background">
+					<nav>
+						<ul>
+							<li><a href="#">HOME</a></li>
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#" id="current-page">MODELS</a></li>
+							<li><a href="#">CONTACT</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<br class="clear">
+			<div>
+				<section id="content">
+					<article id="article">
+						<header>
+							<h1 id="header-n-line" class="h-w-line"><span>Models</span></h2>
+							<nav id="models-menu">
+								<ul>
+									<li><a href="#" id="current-model">RESIDENCE 5</a></li>
+									<li><a href="#">RESIDENCE 6</a></li>
+									<li><a href="#">RESIDENCE 7</a></li>
+								</ul>
+							</nav>
+						</header>
+						<div id="article-container">
+							<header>
+								<h3>ELEVATION C-1 FRENCH COUNTRY</h3>
+							</header>
+							<section>
+								<div id="slider2-container">
+									<div id="slider2">.</div>
+									<div id="slider2-thumbnails">
+										<figure>
+											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
+										</figure>
+										<figure>
+											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
+										</figure>
+										<figure>
+											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
+										</figure>
+										<figure>
+											<img class="slider2_thumbnail" src="img/thumbnail_house_5.jpg" alt="Thumbnail house 5">
+										</figure>
+									</div>
+								</div>
+							</section>
+							<br class="clear">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ipsum. Praesent a nunc ac nulla sollicitudin feugiat. Duis dapibus nibh aliquam imperdiet suscipit.</p>
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut in nisl rutrum, bibendum arcu quis, fermentum dolor. Vestibulum lobortis fermentum ante.</p>
+							<p>Pellentesque pretium magna nec luctus vulputate. Mauris tempus consectetur arcu eu vehicula.</p>
+							<p>Nulla quis leo mauris. Nunc tincidunt elementum ligula, ut convallis eros suscipit vitae. Vivamus congue ornare sodales. Duis in justo eu enim tincidunt tincidunt ut nec lectus.</p>
+						</div>
+					</article>
+					<aside id="details-aside">
+						<header>
+							<h3 id="header-elevations">ELEVATIONS</h3>
+						</header>
+						<div id="elevation-thumbnails">
+							<figure>  
+								<img class="elevation_thumbnail" src="img/thumbnail_elevation_5.jpg" alt="Elevation 5">
+							</figure>
+						</div>
+						<header>
+							<h3>ELEVATION C-1 FRENCH COUNTRY PLANT</h3>
+						</header>
+						<figure>  
+							<img class="thumbnail" id="plant" src="img/blueprint_5.jpg" alt="Elevation C-1 French Country Plant" width="367" height="241">
+						</figure>
+						<a id="download_link" href="pdf/plant5.pdf">DOWNLOAD SPECS AND FUTURE LIST <img src="img/pdf.png" alt="Download PDF" width="84" height="79"></a>
+					</aside>
+					<br class="clear">
+				</section>
+			</div>
+			<footer id="footer">
+				<div id="footer-container">
+					<img src="img/Villas_at_renaissance_2.png" alt="Villas at Renaissance" width="126" height="76">
+					<nav id="nav-footer">
+						<ul>
+							<li><a href="#">HOME</a></li>
+							<li><a href="#">ABOUT US</a></li>
+							<li><a href="#">MODELS</a></li>
+							<li><a href="#">CONTACT</a></li>
+						</ul>
+					</nav>
+					<section id="address">
+						2998 West Ross Avenue El Centro, CA 92243<br>
+						760-352-4622<br>
+						fax 760-353-381<br>
+					</section>
+					<br class="clear">
+				</div>
+			</footer>
+		</div>
+	<div id="modal" class="styled">
+		<figure>
+			<img class="thumbnail" id="plant" src="img/blueprint_5.jpg" alt="Elevation C-1 French Country Plant" width="367" height="241">
+		</figure>
+	</div>
+	<div id="modal-background"></div>
+	<script type="text/javascript">
+	$(document).ready(function(e) {
+		$('#plant').click(function(){	
+			$('#modal').fadeIn();
+			$('#modal-background').fadeTo( 500, .5 );
+		});
+		$('#modal, #modal-background').click(function(){	
+			$('#modal, #modal-background').fadeOut();
+		});
+		
+    });
+	</script>
+	</body>
+</html>

@@ -39,11 +39,12 @@ a:link, a:visited, a:hover, a:active{
 	text-decoration:none;
 	border-width: 0px;
 }
+
 a#current-page:link{
 	color:#EA2B9A;
 }
 a#current-model:link{
-	color:#000;
+	color:#000000;
 }
 #logo-heading, #social{
 	display:inline;
@@ -71,8 +72,7 @@ nav ul{
 	list-style:none;
 	padding:18px 15px 22px 16px;
 }
-
-nav ul li{
+nav ul li, .model-menu ul li{
 	font-family: 'Michroma', sans-serif;
 	font-size:10px;
 	display:inline;
@@ -83,28 +83,43 @@ nav ul li{
 	border-right:1px solid #FFF;
 	padding:10px 20px;
 }
-
 nav ul li:last-child{
 	border-right-width:0px;
 }
-#models-menu{
-	background-color:#FFF;
-	font-weight:700;
-	font-size:12px;
+.model-menu ul li{
+	color:#333333;
 }
 #slider{
 	margin:-20px auto 0px;
 	width:850px;
 	height:303px;
 	border:solid 4px #999999;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
 	-moz-box-shadow: 0px 10px 5px #333333;
 	-webkit-box-shadow: 0px 10px 5px #333333;
 	box-shadow: 0px 10px 5px #333333;
 	background-color:#FFF;
 	
+}
+#slider2{
+	border-top:10px solid #013938;
+	border-bottom:10px solid #013938;
+	border-left:15px solid #013938;
+	border-right:15px solid #013938;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+div figure img{
+	border: 3px solid #013938;
+	margin:0px 2px;
+	display:inline;
+}
+h3{
+	font-family:Arial, sans-serif;
+	color:#000000;
 }
 .slide{
 
@@ -171,4 +186,30 @@ textarea{
 .thumbnail{
 	border:10px solid #013938;
 	margin:10px 25px;
+}
+
+.elevation_thumbnail{
+	border:5px solid #013938;
+	display:inline;
+	width:81px;
+	height:73px;
+}
+
+.slider2_thumbnail{
+	width:59px;
+	height:38px;
+	float:left;
+}
+
+#download_link{
+	background-color:#013938;
+	color:#FFFFFF;
+	padding:10px;
+	font-family:Arial, sans-serif;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+#download_link img{
+	vertical-align: middle;
 }

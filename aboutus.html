@@ -92,14 +92,15 @@
 			</footer>
 		</div>
 	<div id="modal" class="styled">
-		Contenido del modal
+		
 	</div>
 	<div id="modal-background"></div>
 	<script type="text/javascript">
 	$(document).ready(function(e) {
 		$('#thumbnail1, #thumbnail2').click(function(){	
+			$('#modal').load('img/image1.jpg');
 			$('#modal').fadeIn();
-			$('#modal-background').fadeTo( 500, .5 );
+			$('#modal-background').fadeTo(500, .5);
 		});
 		$('#modal, #modal-background').click(function(){	
 			$('#modal, #modal-background').fadeOut();
