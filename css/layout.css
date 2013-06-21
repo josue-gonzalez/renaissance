@@ -118,8 +118,24 @@ h3{
 	padding:5px 30px 30px;
 	float:left;
 }
-#elevation-thumbnails{
-	text-align:left;
+#slideshow2-section{
+	width:650px;
+}
+#elevation-section{
+	width:280px;
+}
+#description-section{
+	width:480px;
+	padding:15px;
+	font-weight:700;
+	text-align:justify;
+}
+#plant-section{
+	width:450px;
+	text-align:center;
+}
+#slideshow2-section, #elevation-section, #description-section, #plant-section{
+	float:left;
 }
 #blueprint{
 	margin:10px auto;
@@ -185,10 +201,10 @@ textarea{
 }
 
 .elevation_thumbnail{
-	border:5px solid #013938;
-	display:inline;
-	width:81px;
-	height:73px;
+	border:7px solid #013938;
+	width:273px;
+	height:92px;
+	margin:3px auto;
 }
 
 .slider2_thumbnail{

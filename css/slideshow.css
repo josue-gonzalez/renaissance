@@ -14,15 +14,12 @@
 	background-color:#FFF;
 }
 .slideshow2, .slideshow2 img{
-	width:300px;
-	height:200px;
+	width:575px;
+	height:275px;
 }
 .slideshow2{
 	margin:auto;
-	border-top:10px solid #013938;
-	border-bottom:10px solid #013938;
-	border-left:15px solid #013938;
-	border-right:15px solid #013938;
+	border:15px solid #013938;
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
