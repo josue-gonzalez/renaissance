@@ -1,0 +1,19 @@
+{
+  "name" : "Renaissance",
+  "description" : "Tema del sitio de GMACDevelopment",
+  "screenshot" : "preview.jpg",
+
+  "author" : "Tricoworks",
+  "authorEmail" : "gustavo@tricoworks.com",
+  "authorUrl" : "http://tricoworks.com",
+
+  "menus" : [
+    "main"
+    ],
+
+  "regions" : [
+        "main",
+		"social",
+        "footer"
+    ]
+}

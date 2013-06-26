@@ -231,3 +231,6 @@ a.selected, a:hover{
 a#current-model:link{
 	color:#000000;
 }
+#header nav ul li a{
+	font-size:18px;
+}
