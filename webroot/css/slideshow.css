@@ -1,6 +1,7 @@
 .slideshow, .slideshow img{
 	height:288px;
 	width:800px;
+        border-radius:12px;
 }
 .slideshow{
 	margin:auto;
@@ -15,7 +16,7 @@
 }
 .slideshow2, .slideshow2 img{
 	width:575px;
-	height:275px;
+	height:340px;
 }
 .slideshow2{
 	margin:auto;

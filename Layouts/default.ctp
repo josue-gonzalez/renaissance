@@ -1,9 +1,12 @@
+<?php
+$this->Helpers->load('Multiattach.Multiattach');
+?>
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<?php
-		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0002","modal",'slideshow'));
+		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0014","modal",'slideshow.css?v=0002'));
 		echo $this->Seo->meta();
 		echo $this->Layout->feed();	
 		?>
@@ -45,27 +48,48 @@
 		<div id="wrapper">
 			<header id="header">
 				<?php 
-				if(Router::url('/')==Router::url(null, false))
-					$tag="h1";
-				else
+				if (Router::url('/') == Router::url(null, false)) {
+					$tag = "h1";
+					$idbg = "slide-background";
+				} else {
 					$tag='div';
+					$idbg = "nav-background";
+				}
 				?>
 				<<?php echo $tag; ?> id="logo-heading">
 					<?php echo $this->Html->image('Villas_at_Renaissance.png', array('alt' => 'Villas at Renaissance', 'width' => '757', 'height' => '394', 'id' => 'topImage')); ?>
 				</<?php echo $tag; ?>>
-				<div id="social-region">
+				<div id="social">
 					<?php echo $this->Layout->blocks('social'); ?>
 				</div>
-				<div id="slide-background">
+				<div id="<?php echo $idbg; ?>">
 					<nav>
 						<?php echo $this->Layout->menu('main'); ?>
 					</nav>
+					<?php if ($tag == "h1") { ?>
 					<section>
 						<div class="slideshow">
-							<img src="img/kitchen.jpg" alt="Kitchen">
-							<img src="img/outdoors.jpg" alt="Outdoors">
+<?php
+	$this->Multiattach->set($node["Multiattach"]);
+	$images = $this->Multiattach->filter(array('mime'=>'#image#i'));
+	foreach ($images as $image) {
+		$imageF = array(
+			'plugin' => 'Multiattach',
+			'controller' => 'Multiattach',
+			'action' => 'displayFile', 
+			'admin' => false,
+			'filename' => $image["Multiattach"]['filename']
+        );
+        ?>
+		<img src="<?php echo $this->Html->url($imageF + array('dimension' => 'main_slide') ); ?>" alt="Villas at Renaissance - <?php echo $image["Multiattach"]['comment']; ?>" />
+		<?php
+	}
+?>
 						</div>
 					</section>
+				<?php
+					}
+				?>
 				</div>
 			</header>
 			<br class="clear">
