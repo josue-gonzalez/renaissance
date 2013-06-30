@@ -75,8 +75,8 @@ nav ul{
 }
 nav ul li, .model-menu nav ul li{
 	font-family: 'Michroma', sans-serif;
-	font-size:17px;
-        font-weight:bold;
+	font-size:14px;
+	font-weight:bold;
 	display:inline;
 	text-align:center;
 	color:white;
@@ -163,6 +163,7 @@ h3{
 	background-color:#381E0F;
 	padding:8px 30px;
 	min-width:960px;
+	background-image:url('/theme/Renaissance/img/texture.jpg');
 }
 #footer img, #nav-footer, #address{
 	float:left;
@@ -242,4 +243,11 @@ a#current-model:link{
 }
 #plant-section .thumbnail {
     margin:10px 10px 0 0;
+}
+#nav-footer ul li{
+	font-size:10px;
+	font-weight:normal;
+}
+#plant-section figure{
+	margin-bottom:25px;
 }

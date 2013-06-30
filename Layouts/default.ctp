@@ -6,7 +6,7 @@ $this->Helpers->load('Multiattach.Multiattach');
 	<head>
 		<meta charset="utf-8">
 		<?php
-		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0014","modal",'slideshow.css?v=0002'));
+		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0017","modal",'slideshow.css?v=0002'));
 		echo $this->Seo->meta();
 		echo $this->Layout->feed();	
 		?>
@@ -14,7 +14,8 @@ $this->Helpers->load('Multiattach.Multiattach');
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<?php
-			echo $this->Html->script('jquery-1.10.1.min');
+
+			echo $this->Html->script('http://code.jquery.com/jquery-1.8.2.min.js');
 			echo $this->Html->script('cycle');
 			echo $this->Layout->js();
 			echo $scripts_for_layout;
@@ -57,7 +58,7 @@ $this->Helpers->load('Multiattach.Multiattach');
 				}
 				?>
 				<<?php echo $tag; ?> id="logo-heading">
-					<?php echo $this->Html->image('Villas_at_Renaissance.png', array('alt' => 'Villas at Renaissance', 'width' => '757', 'height' => '394', 'id' => 'topImage')); ?>
+					<?php echo $this->Html->image('Villas_at_Renaissance.jpg', array('alt' => 'Villas at Renaissance', 'width' => '757', 'height' => '394', 'id' => 'topImage')); ?>
 				</<?php echo $tag; ?>>
 				<div id="social">
 					<?php echo $this->Layout->blocks('social'); ?>

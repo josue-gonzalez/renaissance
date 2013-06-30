@@ -3,9 +3,6 @@ $this->Helpers->load('Multiattach.Multiattach');
 if (count($nodes) == 0) {
 	echo __d('croogo', 'No items found.');
 }
-echo $this->Html->css('lightbox.min', null, array('inline' => false));
-echo $this->Html->script('lightbox.min',array('inline' => false));
-
 $this->Html->scriptStart(array('inline' => false));
 ?>
 $(document).ready(function(){
@@ -41,19 +38,12 @@ $this->Html->scriptEnd();
 				<nav>
 					<ul>
 						<?php
-						$i = 0;
+						
 						foreach ($nodes as $node):
 							$sel = "";
-							if (isset($currentNode)) {
-								if ($node["Node"]["id"] == $currentNode["Node"]["id"]) {
-									$vNode = $node;
-									$sel = "selected";
-								}
-							} else {
-								if ($i == 0) {
-									$vNode = $node;
-									$sel = "selected";
-								}
+							if ($node["Node"]["id"] == $currentNode["Node"]["id"]) {
+								$vNode = $node;
+								$sel = "selected";
 							}
 							$this->Nodes->set($node);
 							$urlNode = array('plugin' => 'nodes', 'controller' => 'nodes', 'action' => 'indexCustom', 'slug' => $this->Nodes->field('slug'));
@@ -61,7 +51,6 @@ $this->Html->scriptEnd();
 							?>
 							<li><?php echo $this->Html->link($this->Nodes->field('title'), $urlNode, array("class" => $sel)); ?></li>
 							<?php
-							$i++;
 						endforeach;
 						?>
 					</ul>
@@ -161,7 +150,7 @@ $this->Html->scriptEnd();
 					$nS = $nS["Multiattach"];
 				?>
 				<figure>
-					<a rel="lightbox[plant]" href="<?php echo $this->Html->url($display + array('dimension' => 'screen', 'filename' => $nS['filename']) ); ?>"><img class="thumbnail" src="<?php echo $this->Html->url($display + array('dimension' => 'page_side', 'filename' => $nS['filename']) ); ?>" alt="Villas at Renaissance - <?php echo $nS['comment']; ?>" /></a>
+					<img class="thumbnail" src="<?php echo $this->Html->url($display + array('dimension' => 'page_side', 'filename' => $nS['filename']) ); ?>" alt="Villas at Renaissance - <?php echo $nS['comment']; ?>" />
 				</figure>
 				<?php
 				}
