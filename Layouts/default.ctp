@@ -6,7 +6,7 @@ $this->Helpers->load('Multiattach.Multiattach');
 	<head>
 		<meta charset="utf-8">
 		<?php
-		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0017","modal",'slideshow.css?v=0002'));
+		echo $this->Html->css(array("reset","bootstrap.min","layout.css?v=0017","modal",'slideshow.css?v=0003'));
 		echo $this->Seo->meta();
 		echo $this->Layout->feed();	
 		?>

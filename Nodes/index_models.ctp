@@ -24,7 +24,7 @@ $(document).ready(function(){
 });
 function switchSlider(whichOne){
 	$("#eslide").html(slider[whichOne]["html"]);
-	$("#etitle").html(slider[whichOne]["title"]);
+	//$("#etitle").html(slider[whichOne]["title"]);
 	$('.slideshow2').cycle({fx: 'scrollLeft'});
 }
 
@@ -98,7 +98,11 @@ $this->Html->scriptEnd();
 			?>
 			<section id="slideshow2-section">
 				<header>
-					<h3 id='etitle'><?php echo $fr['title']; ?></h3>
+					<h3 id='etitle'>
+						<?php 
+						//echo $fr['title'];
+						?>
+					</h3>
 				</header>
 				<div class="slideshow2" id='eslide'>
 					<?php
